@@ -6,6 +6,9 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ToastAndroid, Alert } from 'react-native';
 import { PaymentSheet, StripeProvider, usePaymentSheet ,useStripe} from '@stripe/stripe-react-native';
 import Home from './src/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigation from './src/Navigation/AppNavigation/AppNavigation';
+import { StatusBar } from 'expo-status-bar';
 //import { PaymentConfiguration } from '@stripe/stripe-react-native'; // Replace with the actual path to your payment library
 
 // import { useStripe } from '@stripe/stripe-react-native';
@@ -31,7 +34,13 @@ const App = () => {
       // urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
       merchantIdentifier="merchant.com.{{com.anonymous.MealMe}}" // required for Apple Pay
     >
-      <Home/>
+      
+      <NavigationContainer>
+        {/* <StatusBar backgroundColor='red' /> */}
+        <AppNavigation/>
+      {/* <Home/> */}
+      </NavigationContainer>
+     
     </StripeProvider>
    
   );
