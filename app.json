@@ -1,5 +1,14 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "string | string []",
+          "enableGooglePay": "boolean"
+        }
+      ]
+    ],
     "name": "MealMe",
     "slug": "MealMe",
     "version": "1.0.0",
@@ -21,7 +30,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.MealMe"
     },
     "web": {
       "favicon": "./assets/favicon.png"
