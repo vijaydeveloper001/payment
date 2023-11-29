@@ -6,15 +6,18 @@ import { Screens } from '../Navigation/AppNavigation/AppNavigation'
 const data = [
   {
     id:1,
-    title:'Patbelly'
+    title:'Burger',
+    img:image.Bug
   },
   {
     id:1,
-    title:'Dosa'
+    title:'Dosa',
+    img:image.Con
   },
   {
     id:1,
-    title:'Patbelly'
+    title:'Patbelly',
+    img:image.Pot
   }
 ]
 
@@ -22,8 +25,8 @@ const data = [
 export  function HomeScreens({navigation}) {
   const renderItem = ({item,index}) =>{
     return (
-      <TouchableOpacity key={index} style = {styles.FlatCon} onPress={()=>navigation.navigate(Screens.RestMenu)} >
-        <Image source={image.HomePhto} style = {styles.ImageStyle}/>
+      <TouchableOpacity key={index} style = {{...styles.FlatCon,shadowOpacity:0.5}} onPress={()=>navigation.navigate(Screens.RestMenu)} >
+        <Image source={item.img} style = {{...styles.ImageStyle,shadowOpacity:0.5}}/>
         <Text style = {styles.TextData}>{item.title}</Text>
       </TouchableOpacity>
     )
@@ -31,7 +34,7 @@ export  function HomeScreens({navigation}) {
   return (
     <View  style = {{flex:1,backgroundColor:'#FFFFFF'}}>
       <ScrollView>
-      <Text style = {styles.MenuMain}>Menu</Text>
+      <Text style = {styles.MenuMain}>MealMe</Text>
       <FlatList data={data} renderItem={renderItem}/>
       </ScrollView>
     </View>

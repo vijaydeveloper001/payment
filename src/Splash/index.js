@@ -6,7 +6,13 @@ export default function Splash({navigation}) {
     
     useEffect(()=>{
         setTimeout(()=>{
-            navigation.navigate(Screens.Home)
+            navigation.reset({
+                index: 1,
+                routes: [
+                  { name: Screens.Home },
+                ],
+              })
+            // navigation.navigate(Screens.Home)
         },3000)
     },[])
   return (

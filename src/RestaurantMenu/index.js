@@ -6,14 +6,29 @@ import { PaymentSheet, StripeProvider, usePaymentSheet ,useStripe} from '@stripe
 
 const data = [
     {
-      id:1
-    },
-    {
-      id:1
-    },
-    {
-      id:1
-    },
+        id:1,
+        title:'Burger',
+        img:image.Bug,
+        price:150
+      },
+      {
+        id:1,
+        title:'Dosa',
+        img:image.Con,
+        price:250
+      },
+      {
+        id:1,
+        title:'Patbelly',
+        img:image.Pot,
+        price:350
+      },
+      {
+        id:1,
+        title:'Patbelly',
+        img:image.Pot,
+        price:350
+      }
     
   ]
 
@@ -189,9 +204,9 @@ export default function Restmenu() {
     const renderItem = ({item,index}) =>{
         return (
           <TouchableOpacity key={index} style = {styles.FlatCon}>
-            <Image source={image.HomePhto} style = {styles.ImageStyle}/>
-            <Text style = {styles.TextData} numberOfLines={1}>Patbelly</Text>
-            <Text style = {styles.TextData}>Rs 200</Text>
+            <Image source={item?.img} style = {styles.ImageStyle}/>
+            <Text style = {styles.TextData} numberOfLines={1}>{item?.title}</Text>
+            <Text style = {styles.TextData}>Rs {item.price}</Text>
             <TouchableOpacity style = {styles.OrderCon} onPress={handlePaymentFlow}>
                 <Text style = {styles.orderText}>Place Order</Text>
             </TouchableOpacity>
