@@ -13,7 +13,7 @@ export default function Splash({navigation}) {
                 ],
               })
             // navigation.navigate(Screens.Home)
-        },3000)
+        },1000)
     },[])
   return (
     <View style = {styles.Main}>

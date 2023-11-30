@@ -21,12 +21,12 @@ export default function AppNavigation() {
         name={Screens.Home}
         component={HomeScreens}
         options={{
-        title:'HomeScreens',
+        title:'Restaurant for you',
         headerStyle: {
             backgroundColor:'white' 
           },
 
-          headerTintColor:'red',
+          headerTintColor:'black',
           headerTitleStyle: {
             fontWeight: '700',
             
@@ -53,12 +53,12 @@ export default function AppNavigation() {
         name={Screens.RestMenu}
         component={Restmenu}
         options={{
-            title:'Restaurant Menu',
+            title:'Restaurant menu',
             headerStyle: {
                 backgroundColor:'white' 
               },
     
-              headerTintColor:'red',
+              headerTintColor:'black',
               headerTitleStyle: {
                 fontWeight: '700',
                 

@@ -3,5 +3,6 @@ export const image  = {
     Bug :require('./bug.jpeg'),
     Cake :require('./cake.jpeg'),
     Pot :require('./pot.jpeg'),
-    Con :require('./con.jpeg')
+    Con :require('./burgerpng.png'),
+    con :require('./con.jpeg'),
 }
