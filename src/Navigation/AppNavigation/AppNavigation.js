@@ -10,72 +10,50 @@ const Stack = createNativeStackNavigator();
 export const Screens = {
   Home: "Home",
   RestMenu: "RestMenu",
-  Splash:'Splash'
+  Splash: "Splash",
 };
 
 export default function AppNavigation() {
   return (
     <Stack.Navigator>
-        <Stack.Screen name = {Screens.Splash} component={Splash} options={{headerShown:false}}/>
+      <Stack.Screen
+        name={Screens.Splash}
+        component={Splash}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name={Screens.Home}
         component={HomeScreens}
         options={{
-        title:'Restaurant for you',
-        headerStyle: {
-            backgroundColor:'white' 
+          title: "Restaurant for you",
+          headerStyle: {
+            backgroundColor: "white",
           },
 
-          headerTintColor:'black',
+          headerTintColor: "black",
           headerTitleStyle: {
-            fontWeight: '700',
-            
-        
+            fontWeight: "700",
           },
-          headerBackVisible:false,
-      
+          headerBackVisible: false,
 
-          headerTitleAlign:'center',
-        
-
-    
-        //   headerLeft: () => (
-        //     <Button
-        //       onPress={() => console.log("This is a button!")}
-        //       title="Info"
-             
-             
-        //     />
-        //   ),
+          headerTitleAlign: "center",
         }}
       />
       <Stack.Screen
         name={Screens.RestMenu}
         component={Restmenu}
         options={{
-            title:'Restaurant menu',
-            headerStyle: {
-                backgroundColor:'white' 
-              },
-    
-              headerTintColor:'black',
-              headerTitleStyle: {
-                fontWeight: '700',
-                
-            
-              },
-              headerTitleAlign:'center',
-             
-    
-            //   headerRight: () => (
-            //     <Button
-            //       onPress={() => console.log("This is a button!")}
-            //       title="Info"
-            //       color="#fff"
-                 
-            //     />
-            //   ),
-            }}
+          title: "Restaurant menu",
+          headerStyle: {
+            backgroundColor: "white",
+          },
+
+          headerTintColor: "black",
+          headerTitleStyle: {
+            fontWeight: "700",
+          },
+          headerTitleAlign: "center",
+        }}
       />
     </Stack.Navigator>
   );
