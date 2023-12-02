@@ -178,8 +178,8 @@ export default function Restmenu({ route }) {
       // setLoading(true)
       const response = await fetch(
         `https://api.stripe.com/v1/payment_intents?customer=${customerId}&amount=${
-          pricce * 100
-        }&currency=inr&automatic_payment_methods[enabled]=true`,
+          pricce 
+        }&currency=usd&automatic_payment_methods[enabled]=true`,
         {
           method: "POST",
           headers: {
@@ -219,7 +219,7 @@ export default function Restmenu({ route }) {
       console.log("API Response:", response);
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        console.log(data,'Get_Restaruant_Menu');
         // console.log('API Response:', data?.categories[0]
         // setapidata(data?.categories)
         let filterdata = data?.categories.filter((item, index) => {
@@ -268,7 +268,7 @@ export default function Restmenu({ route }) {
         <Text style={styles.TextData} numberOfLines={1}>
           {item?.name}
         </Text>
-        <Text style={styles.TextData}>Rs {item?.menu_item_list[0]?.price}</Text>
+        <Text style={styles.TextData}>$ {item?.menu_item_list[0]?.price/100}</Text>
         <TouchableOpacity
           style={styles.OrderCon}
           onPress={() => {

@@ -54,7 +54,7 @@ export function HomeScreens({ navigation }) {
     )
       .then((data) => {
         setloader(false);
-        console.log(data);
+        console.log(data,'Tag_Get_Resetaurant');
         setapidata(data?.data?.stores);
         // console.log(JSON.stringify(data?.data?.stores))
       })
