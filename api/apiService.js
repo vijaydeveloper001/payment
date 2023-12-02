@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const BASE_URL = 'https://api.stripe.com/v1';
 
-const secretKey = 'sk_test_51OFgXoSH0WsKss1ljHjnrQeEaFvw2P0IQMkMvWe65XIAYaZGP1Oi1elxx2B1nrpteYbYpSJtJaciYSk0213MIm7e00chSirC3V';
-
+// const secretKey = 'sk_test_51OFgXoSH0WsKss1ljHjnrQeEaFvw2P0IQMkMvWe65XIAYaZGP1Oi1elxx2B1nrpteYbYpSJtJaciYSk0213MIm7e00chSirC3V';
+const secretKey = 'sk_test_51O956QHu2qClO4IHORJqTV1Uuh7EIC0RIp1WAOaRbZXrWHHrvaGePqHkQwsqsKxUuWzyBTPtYvAq0sfyzCDbU8I9005gJ9mDpj'
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {

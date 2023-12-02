@@ -13,7 +13,7 @@ import { StatusBar } from 'expo-status-bar';
 
 // import { useStripe } from '@stripe/stripe-react-native';
 
-export const PublishableKey = 'pk_test_51OFgXoSH0WsKss1lL1tvirPW1gRtZriFawfAA1Q7vQcNyEFERwKdwVycevW3FSTxgXiXqSKtN20aeyFviWQNsgxc00ykNPze6i';
+export const PublishableKey = 'pk_test_51O956QHu2qClO4IHn1F6RGUshFlHYNv3vxew7QDnZALtbDGwJVs5RmoGmdoC2FASkue8ltHnJxLIlXDwXu6GBBbu006pRAd0i6';
 
 // Define constants
 const SecretKey = 'sk_test_51OFgXoSH0WsKss1ljHjnrQeEaFvw2P0IQMkMvWe65XIAYaZGP1Oi1elxx2B1nrpteYbYpSJtJaciYSk0213MIm7e00chSirC3V';

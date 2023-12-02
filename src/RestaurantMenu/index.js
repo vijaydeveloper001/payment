@@ -38,13 +38,14 @@ const data = [
   },
 ];
 
-export const PublishableKey =
-  "pk_test_51OFgXoSH0WsKss1lL1tvirPW1gRtZriFawfAA1Q7vQcNyEFERwKdwVycevW3FSTxgXiXqSKtN20aeyFviWQNsgxc00ykNPze6i";
+// export const PublishableKey =
+//   "pk_test_51OFgXoSH0WsKss1lL1tvirPW1gRtZriFawfAA1Q7vQcNyEFERwKdwVycevW3FSTxgXiXqSKtN20aeyFviWQNsgxc00ykNPze6i";
 
+export const PublishableKey  = 'pk_test_51O956QHu2qClO4IHn1F6RGUshFlHYNv3vxew7QDnZALtbDGwJVs5RmoGmdoC2FASkue8ltHnJxLIlXDwXu6GBBbu006pRAd0i6'
 // Define constants
-const SecretKey =
-  "sk_test_51OFgXoSH0WsKss1ljHjnrQeEaFvw2P0IQMkMvWe65XIAYaZGP1Oi1elxx2B1nrpteYbYpSJtJaciYSk0213MIm7e00chSirC3V";
-
+// const SecretKey =
+//   "sk_test_51OFgXoSH0WsKss1ljHjnrQeEaFvw2P0IQMkMvWe65XIAYaZGP1Oi1elxx2B1nrpteYbYpSJtJaciYSk0213MIm7e00chSirC3V";
+const SecretKey = 'sk_test_51O956QHu2qClO4IHORJqTV1Uuh7EIC0RIp1WAOaRbZXrWHHrvaGePqHkQwsqsKxUuWzyBTPtYvAq0sfyzCDbU8I9005gJ9mDpj'
 const { width } = Dimensions.get("window");
 let pricce = null;
 export default function Restmenu({ route }) {
@@ -178,12 +179,13 @@ export default function Restmenu({ route }) {
       // setLoading(true)
       const response = await fetch(
         `https://api.stripe.com/v1/payment_intents?customer=${customerId}&amount=${
-          pricce 
+          pricce
         }&currency=usd&automatic_payment_methods[enabled]=true`,
         {
           method: "POST",
           headers: {
             Authorization: `Bearer ${SecretKey}`,
+            
           },
         }
       );
